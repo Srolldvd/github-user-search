@@ -4,11 +4,84 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>DevFinder</title>
   </head>
-  <body class="bg-secondary-200 min-h-screen">
-    <div id="app">
-    </div>
+  <body class="font-sans bg-secondary-200 min-h-screen grid place-items-center text-white">
+    <div class="w-full max-w-2xl p-4">
+    <header class="mb-4">
+      <nav class="flex justify-between">
+        <div>
+          <h1 class="text-xl">devfinder</h1>
+        </div>
+        <div class="flex items-center gap-2"
+            data-theme-mode="light">
+          <span>LIGHT</span>
+          <i class="fa-solid fa-sun"></i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="bg-secondary-100 p-1 mb-4 rounded-lg">
+        <form class="relative flex justify-between items-center gap-4 p-1" id="form">
+          <div class="pl-2 text-primary-100 text-xl transition-colors duration-200 cursor-pointer hover:text-primary-200">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="relative flex-1 h-10">
+            <label for="searcher" class="absolute left-2 top-1/4 text-gray-400 whitespace-nowrap">
+              Search Github username...</label>
+            <input type="text" name="searcher" id="searcher" class="bg-transparent w-full h-full pl-2 outline-0 border-0 cursor-pointer" data-searcher>
+        </div>
+          <button type="submit" class="bg-primary-100 py-2 px-4 rounded-md transition-colors duration-200  hover:bg-primary-200">Search</button>
+        </form>
+      </section>
+      <section class="bg-secondary-100 grid grid-cols-[1fr_2fr] gap-4 p-8 rounded-lg">
+        <aside class="px-4">
+          <img src="/github-logo.png" alt="Github user avatar" class="block max-w-full rounded-full w-32" id="avatar">
+        </aside>
+        <section class="flex flex-col gap-4">
+          <div class="grid grid-cols-2 gap-1">
+            <h2 class="text-2xl" id="login">The Octocat</h2>
+            <a href="#" class="text-primary-100 col-start-1 mb-4" id="github-link">@octocat</a>
+            <p class="text-gray-400 font-light col-start-2 col-end-3 row-start-1 text-right" id="joined">Joined 25 Jan 2011</p>
+            <p class="text-gray-400 font-light col-start-1" id="bio">This profile has no bio</p> 
+          </div>
+          <div class="flex justify-between items-center gap-2 bg-secondary-200 py-4 px-6 rounded-lg ">
+            <div class="flex flex-col">
+              <span class="text-gray-400 font-light">Repos</span>
+              <strong id="repos">8</strong>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-gray-400 font-light">Followers</span>
+              <strong id="followers">3938</strong>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-gray-400 font-light">Following</span>
+              <strong  id="following">9</strong>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot"></i>
+              <span class="font-light" id="location">San Francisco</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-brands fa-twitter"></i>
+              <span class="font-light" id="twitter">Not Available</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-link"></i>
+              <span class="font-light" id="link">https://github.blog</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-building"></i>
+              <span class="font-light" id="company">@github</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
