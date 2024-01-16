@@ -6,76 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevFinder</title>
   </head>
-  <body class="font-sans bg-secondary-200 min-h-screen grid place-items-center text-white">
+  <body class="font-sans bg-secondary-200 min-h-screen grid place-items-center text-accent-100">
     <div class="w-full max-w-2xl p-4">
     <header class="mb-4">
       <nav class="flex justify-between">
         <div>
           <h1 class="text-xl">devfinder</h1>
         </div>
-        <div class="flex items-center gap-2"
-            data-theme-mode="light">
+        <div class="flex items-center gap-2 cursor-pointer"
+         id="theme-switcher">
           <span>LIGHT</span>
           <i class="fa-solid fa-sun"></i>
         </div>
       </nav>
     </header>
     <main>
-      <section class="bg-secondary-100 p-1 mb-4 rounded-lg">
+      <section class="bg-secondary-100 p-1 mb-4 rounded-lg shadow-primary">
         <form class="relative flex justify-between items-center gap-4 p-1" id="form">
-          <div class="pl-2 text-primary-100 text-xl transition-colors duration-200 cursor-pointer hover:text-primary-200">
+          <div class="pl-2 text-primary-100 text-xl transition-colors duration-200 hover:text-primary-200">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
           <div class="relative flex-1 h-10">
-            <label for="searcher" class="absolute left-2 top-1/4 text-gray-400 whitespace-nowrap">
+            <label for="searcher" class="absolute w-full text-center top-1/4 text-accent-200 whitespace-nowrap transition-transform duration-200 cursor-pointer">
               Search Github username...</label>
-            <input type="text" name="searcher" id="searcher" class="bg-transparent w-full h-full pl-2 outline-0 border-0 cursor-pointer" data-searcher>
+            <input type="text" name="searcher" id="searcher" class="bg-transparent w-full h-full pl-2 outline-0 border-0" data-searcher>
         </div>
-          <button type="submit" class="bg-primary-100 py-2 px-4 rounded-md transition-colors duration-200  hover:bg-primary-200">Search</button>
+          <button type="submit" class="bg-primary-100 py-2 px-4 rounded-md text-white transition-colors duration-200  hover:bg-primary-200">Search</button>
         </form>
       </section>
-      <section class="bg-secondary-100 grid grid-cols-[1fr_2fr] gap-4 p-8 rounded-lg">
+      <section class="bg-secondary-100 grid grid-cols-[1fr_2fr] gap-4 p-8 rounded-lg shadow-primary">
         <aside class="px-4">
           <img src="/github-logo.png" alt="Github user avatar" class="block max-w-full rounded-full w-32" id="avatar">
         </aside>
         <section class="flex flex-col gap-4">
           <div class="grid grid-cols-2 gap-1">
-            <h2 class="text-2xl" id="login">The Octocat</h2>
-            <a href="#" class="text-primary-100 col-start-1 mb-4" id="github-link">@octocat</a>
-            <p class="text-gray-400 font-light col-start-2 col-end-3 row-start-1 text-right" id="joined">Joined 25 Jan 2011</p>
-            <p class="text-gray-400 font-light col-start-1" id="bio">This profile has no bio</p> 
+            <h2 class="text-2xl" id="login"></h2>
+            <a href="#" class="text-primary-100 col-start-1 mb-4" id="github-link" target="_blank"></a>
+            <p class="text-accent-200 font-light col-start-2 col-end-3 row-start-1 text-right" id="joined"></p>
+            <p class="text-accent-200 font-light col-start-1" id="bio"></p> 
           </div>
           <div class="flex justify-between items-center gap-2 bg-secondary-200 py-4 px-6 rounded-lg ">
             <div class="flex flex-col">
-              <span class="text-gray-400 font-light">Repos</span>
-              <strong id="repos">8</strong>
+              <span class="text-accent-200 font-light">Repos</span>
+              <strong id="repos"></strong>
             </div>
             <div class="flex flex-col">
-              <span class="text-gray-400 font-light">Followers</span>
-              <strong id="followers">3938</strong>
+              <span class="text-accent-200 font-light">Followers</span>
+              <strong id="followers"></strong>
             </div>
             <div class="flex flex-col">
-              <span class="text-gray-400 font-light">Following</span>
-              <strong  id="following">9</strong>
+              <span class="text-accent-200 font-light">Following</span>
+              <strong  id="following"></strong>
             </div>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div class="flex items-center gap-2">
               <i class="fa-solid fa-location-dot"></i>
-              <span class="font-light" id="location">San Francisco</span>
+              <span class="font-light" id="location"></span>
             </div>
             <div class="flex items-center gap-2">
               <i class="fa-brands fa-twitter"></i>
-              <span class="font-light" id="twitter">Not Available</span>
+              <span class="font-light" id="twitter"></span>
             </div>
             <div class="flex items-center gap-2">
               <i class="fa-solid fa-link"></i>
-              <span class="font-light" id="link">https://github.blog</span>
+              <span class="font-light" id="link"></span>
             </div>
             <div class="flex items-center gap-2">
               <i class="fa-solid fa-building"></i>
-              <span class="font-light" id="company">@github</span>
+              <span class="font-light" id="company"></span>
             </div>
           </div>
         </section>
